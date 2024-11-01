@@ -1,0 +1,68 @@
+{
+    "window.commandCenter": false,
+
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Cascadia Code",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.fontSize": 13,
+    "editor.lineHeight": 1,
+    "editor.renderLineHighlight": "gutter",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.guides.bracketPairs": "active",
+    "editor.wordWrap": "on",
+    "editor.stickyScroll.enabled": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 12,
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "es5",
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+
+    "files.autoSave": "afterDelay",
+    "cSpell.language": "en, pt_BR",
+    "auto-rename-tag.activationOnLanguage": [
+        "html",
+        "xml",
+        "php",
+        "javascript"
+    ],
+
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "emmet.preferences": {},
+    "emmet.variables": { "lang": "pt-br", "charset": "UTF-8" },
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": false,
+    "workbench.colorTheme": "Andromeda",
+    "explorer.confirmDragAndDrop": false,
+
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.useCMakePresets": "always",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "workbench.editorAssociations": {
+        "*.html": "default"
+    },
+    "liveServer.settings.CustomBrowser": "chrome",
+    "workbench.layoutControl.enabled": false,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "database-client.autoSync": true,
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "java.debug.settings.console": "internalConsole"
+}
