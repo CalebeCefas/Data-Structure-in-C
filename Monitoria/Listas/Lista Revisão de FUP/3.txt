@@ -1,0 +1,51 @@
+Considere o vetor de caracteres chamado v[8] abaixo:
+
+A B A C A T E
+
+a) Por que é declarado com 8 espaços e não 7?
+R:  Porque o vetor está sendo preenchido por caracteres, logo precisa do último caractere nulo ('\0')
+    para indicar o final do vetor.
+
+b) Explique a diferença entre v+4, *(v+4) e *v+4?
+R:  v+4: Esta expressão é um ponteiro para o elemento de índice 4 no vetor v. 
+    Como v é o endereço do primeiro elemento do vetor, v+4 move o ponteiro para o quinto elemento do vetor 
+    (ou seja, o caractere na posição v[4], que é 'A').
+
+    *(v+4): Esta expressão desreferencia o ponteiro v+4, obtendo o valor armazenado na posição v[4]. 
+    Então, *(v+4) retorna o caractere 'A', que é o quinto elemento do vetor.
+
+    *v+4: Esta expressão desreferencia v (ou seja, *v retorna o primeiro caractere do vetor, 'A') e, 
+    em seguida, soma 4 ao valor ASCII de 'A'. O resultado será o caractere que corresponde ao valor 
+    ASCII de 'A' + 4, que é 'E'.
+
+c) Faça uma função para inverter os elementos do vetor.
+R:  #include <stdio.h>
+
+    void inverterVetor(char *v, int tamanho) {
+        int i;
+        for (i = 0; i < tamanho / 2; i++) {
+            char temp = v[i];
+            v[i] = v[tamanho - i - 1];
+            v[tamanho - i - 1] = temp;
+        }
+    }
+
+    int main() {
+        char v[8] = {'A', 'B', 'A', 'C', 'A', 'T', 'E', '\0'};
+        inverterVetor(v, 7);  // Passamos 7 para inverter os primeiros 7 elementos
+
+        printf("Vetor invertido: %s\n", v);
+        return 0;
+    }
+
+d) Para imprimir os elementos do vetor podemos utilizar o seguinte loop:
+
+for(char *aux = v; *aux != ???; aux = aux+1){
+    printf("%c",*aux);
+    }
+O que devemos colocar em ??? para que o objetivo seja cumprido e por quê?
+
+R: Em ???, devemos colocar '\0'. Ao colocar '\0' em ???, o loop for percorre cada 
+caractere do vetor até encontrar o caractere nulo '\0', que indica o fim da string. 
+Isso garante que todos os caracteres válidos do vetor v serão exibidos e o loop irá 
+parar ao alcançar o caractere nulo.
