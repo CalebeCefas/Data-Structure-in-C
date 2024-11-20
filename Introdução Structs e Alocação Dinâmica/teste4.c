@@ -12,25 +12,22 @@ int main() {
     printf("Quantos alunos deseja cadastrar? ");
     scanf("%d", &numAlunos);
 
-    // Alocando memória para um array de structs Aluno
     struct Aluno *alunos = (struct Aluno *) malloc(numAlunos * sizeof(struct Aluno));
     if (alunos == NULL) {
         printf("Erro ao alocar memória.\n");
-        return 1; // Retorna erro
+        return 1;
     }
 
-    // Entrada de dados para cada aluno
     for (int i = 0; i < numAlunos; i++) {
         printf("\nAluno %d:\n", i + 1);
         printf("Digite o nome do aluno: ");
-        scanf(" %[^\n]", alunos[i].nome); // Lê uma string com espaços
+        scanf(" %[^\n]", alunos[i].nome);
         printf("Digite a idade do aluno: ");
         scanf("%d", &alunos[i].idade);
         printf("Digite a media do aluno: ");
         scanf("%f", &alunos[i].media);
     }
 
-    // Exibindo os dados dos alunos
     printf("\n--- Dados dos Alunos ---\n");
     for (int i = 0; i < numAlunos; i++) {
         printf("Aluno %d:\n", i + 1);
@@ -39,7 +36,6 @@ int main() {
         printf("Media: %.2f\n\n", alunos[i].media);
     }
 
-    // Liberando a memória alocada
     free(alunos);
 
     return 0;
