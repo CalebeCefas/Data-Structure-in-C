@@ -1,8 +1,3 @@
-/*14.Cadastro Dinâmico de Alunos:
-Escreva um programa que utilize alocação dinâmica para cadastrar uma
-lista de alunos, onde o número de alunos é informado pelo usuário. Utilize
-malloc para alocar memória para cada aluno, armazenando nome e idade.*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
