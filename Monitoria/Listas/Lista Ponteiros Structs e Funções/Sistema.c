@@ -113,7 +113,7 @@ int main() {
     int opcao;
 
     if (alunos == NULL) {
-        printf("Erro ao alocar memória para o array de alunos!\n");
+        printf("Erro ao alocar memoria para o array de alunos!\n");
         return 1;
     }
 
