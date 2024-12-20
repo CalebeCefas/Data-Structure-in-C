@@ -11,26 +11,27 @@ typedef struct {
 
 void registrarPresenca(Aluno alunos[], int totalAlunos) {
     char nome[50];
-    printf("\nDigite o nome do aluno para registrar a presença: ");
-    scanf(" %[^]s", nome);
+    printf("\nDigite o nome do aluno para registrar a presenca: ");
+    getchar();
+    scanf("%[^\n]", nome);
 
     for (int i = 0; i < totalAlunos; i++) {
         if (strcmp(alunos[i].nome, nome) == 0) {
             alunos[i].presencas++;
             alunos[i].totalAulas++;
-            printf("Presença registrada para o aluno %s.\n", alunos[i].nome);
+            printf("Presenca registrada para o aluno %s.\n", alunos[i].nome);
             return;
         }
     }
-    printf("Aluno não encontrado. Certifique-se de que o nome está correto.\n");
+    printf("Aluno nao encontrado. Certifique-se de que o nome esta correto.\n");
 }
 
 void consultarFrequencia(Aluno alunos[], int totalAlunos) {
-    printf("\nFrequência dos alunos:\n");
+    printf("\nFrequencia dos alunos:\n");
     for (int i = 0; i < totalAlunos; i++) {
         float porcentagem = (alunos[i].totalAulas > 0) ? 
                             ((float)alunos[i].presencas / alunos[i].totalAulas) * 100 : 0;
-        printf("Aluno: %s | Presenças: %d | Total de Aulas: %d | Frequência: %.2f%%\n",
+        printf("Aluno: %s | Presencas: %d | Total de Aulas: %d | Frequencia: %.2f%%\n",
                alunos[i].nome, alunos[i].presencas, alunos[i].totalAulas, porcentagem);
     }
 }
@@ -39,22 +40,23 @@ int main() {
     Aluno alunos[MAX_ALUNOS];
     int totalAlunos = 0, opcao;
 
-    printf("Quantos alunos há na turma? (Max %d): ", MAX_ALUNOS);
+    printf("Quantos alunos ha na turma? (Max %d): ", MAX_ALUNOS);
     scanf("%d", &totalAlunos);
+    getchar();
 
     for (int i = 0; i < totalAlunos; i++) {
         printf("Digite o nome do aluno %d: ", i + 1);
-        scanf(" %[^]s", alunos[i].nome);
+        scanf("%[^\n]", alunos[i].nome);
         alunos[i].totalAulas = 0;
         alunos[i].presencas = 0;
     }
 
     do {
         printf("\nMenu:\n");
-        printf("1: Registrar presença\n");
-        printf("2: Consultar frequência\n");
+        printf("1: Registrar presenca\n");
+        printf("2: Consultar frequencia\n");
         printf("3: Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -68,7 +70,7 @@ int main() {
                 printf("Saindo do programa.\n");
                 break;
             default:
-                printf("Opção inválida. Tente novamente.\n");
+                printf("Opcao invalida. Tente novamente.\n");
         }
     } while (opcao != 3);
 

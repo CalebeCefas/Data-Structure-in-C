@@ -6,13 +6,13 @@ float* inserirNotas(int *quantidade) {
     scanf("%d", quantidade);
 
     if (*quantidade <= 0) {
-        printf("Quantidade de notas inválida.\n");
+        printf("Quantidade de notas invalida.\n");
         return NULL;
     }
 
     float *notas = (float *)malloc((*quantidade) * sizeof(float));
     if (notas == NULL) {
-        printf("Erro ao alocar memória.\n");
+        printf("Erro ao alocar memoria.\n");
         exit(1);
     }
 
@@ -46,10 +46,10 @@ int main() {
     do {
         printf("\nGerenciador de Notas\n");
         printf("1: Inserir notas\n");
-        printf("2: Calcular média\n");
+        printf("2: Calcular media\n");
         printf("3: Exibir notas\n");
         printf("4: Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -65,7 +65,7 @@ int main() {
                     printf("Nenhuma nota inserida ainda.\n");
                 } else {
                     float media = calcularMedia(notas, quantidade);
-                    printf("Média das notas: %.2f\n", media);
+                    printf("Media das notas: %.2f\n", media);
                 }
                 break;
 
@@ -82,7 +82,7 @@ int main() {
                 break;
 
             default:
-                printf("Opção inválida. Tente novamente.\n");
+                printf("Opçao invalida. Tente novamente.\n");
         }
     } while (opcao != 4);
 

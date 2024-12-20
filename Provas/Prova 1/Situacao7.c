@@ -45,7 +45,7 @@ void converterParaBinario(int numero) {
         numero /= 2;
     }
 
-    printf("Número binário: ");
+    printf("Numero binario: ");
     while (!pilhaVazia(&pilha)) {
         printf("%d", desempilhar(&pilha));
     }
@@ -55,11 +55,11 @@ void converterParaBinario(int numero) {
 int main() {
     int numero;
 
-    printf("Digite um número inteiro positivo para converter em binário: ");
+    printf("Digite um numero inteiro positivo para converter em binario: ");
     scanf("%d", &numero);
 
     if (numero < 0) {
-        printf("Erro: número inválido. Apenas inteiros positivos são permitidos.\n");
+        printf("Erro: numero invalido. Apenas inteiros positivos sao permitidos.\n");
         return 1;
     }
 

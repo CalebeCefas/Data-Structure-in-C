@@ -14,16 +14,16 @@ int main() {
     printf("Gerador de Fatoriais\n");
 
     do {
-        printf("\nDigite um número inteiro positivo: ");
+        printf("\nDigite um numero inteiro positivo: ");
         scanf("%d", &numero);
 
         if (numero < 0) {
-            printf("Entrada inválida! Apenas números inteiros positivos são aceitos.\n");
+            printf("Entrada invalida! Apenas numeros inteiros positivos sao aceitos.\n");
         }
     } while (numero < 0);
 
     unsigned long long resultado = calcularFatorial(numero);
-    printf("O fatorial de %d é: %llu\n", numero, resultado);
+    printf("O fatorial de %d eh: %llu\n", numero, resultado);
 
     return 0;
 }

@@ -14,7 +14,7 @@ float multiplicacao(float a, float b) {
 
 float divisao(float a, float b) {
     if (b == 0) {
-        printf("Erro: Divisão por zero não permitida.\n");
+        printf("Erro: Divisao por zero nao permitida.\n");
         return 0;
     }
     return a / b;
@@ -27,17 +27,17 @@ int main() {
     do {
         printf("\nCalculadora Simples\n");
         printf("1: Soma\n");
-        printf("2: Subtração\n");
-        printf("3: Multiplicação\n");
-        printf("4: Divisão\n");
+        printf("2: Subtracao\n");
+        printf("3: Multiplicacao\n");
+        printf("4: Divisao\n");
         printf("5: Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         if (opcao >= 1 && opcao <= 4) {
-            printf("Digite o primeiro número: ");
+            printf("Digite o primeiro numero: ");
             scanf("%f", &num1);
-            printf("Digite o segundo número: ");
+            printf("Digite o segundo numero: ");
             scanf("%f", &num2);
         }
 
@@ -64,7 +64,7 @@ int main() {
                 printf("Saindo da calculadora.\n");
                 break;
             default:
-                printf("Opção inválida. Tente novamente.\n");
+                printf("Opcao inválida. Tente novamente.\n");
         }
     } while (opcao != 5);
 

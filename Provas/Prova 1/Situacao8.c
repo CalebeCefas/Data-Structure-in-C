@@ -56,14 +56,14 @@ int main() {
     int opcao, valor;
 
     do {
-        printf("\nMenu de Operações com Pilha\n");
+        printf("\nMenu de Operacoes com Pilha\n");
         printf("1: Inserir dados na pilha\n");
         printf("2: Retirar dados da pilha\n");
-        printf("3: Verificar se a pilha está cheia\n");
-        printf("4: Verificar se a pilha está vazia\n");
+        printf("3: Verificar se a pilha esta cheia\n");
+        printf("4: Verificar se a pilha esta vazia\n");
         printf("5: Mostrar pilha e array auxiliar\n");
         printf("6: Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -83,17 +83,17 @@ int main() {
 
             case 3:
                 if (pilhaCheia(&pilha)) {
-                    printf("A pilha está cheia.\n");
+                    printf("A pilha esta cheia.\n");
                 } else {
-                    printf("A pilha não está cheia.\n");
+                    printf("A pilha nao esta cheia.\n");
                 }
                 break;
 
             case 4:
                 if (pilhaVazia(&pilha)) {
-                    printf("A pilha está vazia.\n");
+                    printf("A pilha esta vazia.\n");
                 } else {
-                    printf("A pilha não está vazia.\n");
+                    printf("A pilha nao esta vazia.\n");
                 }
                 break;
 
@@ -117,7 +117,7 @@ int main() {
                 break;
 
             default:
-                printf("Opção inválida. Tente novamente.\n");
+                printf("Opcao invalida. Tente novamente.\n");
         }
 
     } while (opcao != 6);

@@ -11,14 +11,14 @@ typedef struct {
 
 void adicionarProduto(Produto estoque[], int *totalProdutos) {
     if (*totalProdutos >= MAX_PRODUTOS) {
-        printf("\nO estoque está cheio. Não é possível adicionar mais produtos.\n");
+        printf("\nO estoque esta cheio. Nao eh possivel adicionar mais produtos.\n");
         return;
     }
 
     Produto novoProduto;
     printf("\nDigite o nome do produto: ");
-    scanf("%[^]s", novoProduto.nome);
-    printf("Digite o código do produto: ");
+    scanf(" %[^\n]", novoProduto.nome);
+    printf("Digite o codigo do produto: ");
     scanf("%d", &novoProduto.codigo);
     printf("Digite a quantidade inicial em estoque: ");
     scanf("%d", &novoProduto.quantidade);
@@ -30,7 +30,7 @@ void adicionarProduto(Produto estoque[], int *totalProdutos) {
 
 void atualizarQuantidade(Produto estoque[], int totalProdutos) {
     int codigo, novaQuantidade;
-    printf("\nDigite o código do produto que deseja atualizar: ");
+    printf("\nDigite o codigo do produto que deseja atualizar: ");
     scanf("%d", &codigo);
 
     for (int i = 0; i < totalProdutos; i++) {
@@ -43,18 +43,18 @@ void atualizarQuantidade(Produto estoque[], int totalProdutos) {
             return;
         }
     }
-    printf("\nProduto com o código %d não encontrado.\n", codigo);
+    printf("\nProduto com o codigo %d nao encontrado.\n", codigo);
 }
 
 void mostrarEstoque(Produto estoque[], int totalProdutos) {
     if (totalProdutos == 0) {
-        printf("\nO estoque está vazio.\n");
+        printf("\nO estoque esta vazio.\n");
         return;
     }
 
     printf("\nEstoque atual:\n");
     for (int i = 0; i < totalProdutos; i++) {
-        printf("Produto: %s | Código: %d | Quantidade: %d\n",
+        printf("Produto: %s | Codigo: %d | Quantidade: %d\n",
                estoque[i].nome, estoque[i].codigo, estoque[i].quantidade);
     }
 }
@@ -70,7 +70,7 @@ int main() {
         printf("2: Atualizar quantidade\n");
         printf("3: Mostrar estoque atual\n");
         printf("4: Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -87,7 +87,7 @@ int main() {
                 printf("\nSaindo do programa.\n");
                 break;
             default:
-                printf("\nOpção inválida. Tente novamente.\n");
+                printf("\nOpcao invalida. Tente novamente.\n");
         }
     } while (opcao != 4);
 
